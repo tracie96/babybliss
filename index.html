@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babybliss</title>
+  <script src="https://kit.fontawesome.com/6f82546da0.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./modal.css" />
+  <link rel="stylesheet" href="./nav.css" />
+  <script src="./modal.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="container-video">
+      <div class="logo-container top-section-spacing">
+        <img src="./assets/babybliss_logo2.svg" alt="logo" class="logo-img" />
+
+        <ul id="myLinks" class="topnav">
+          <li>
+            <a href="https://babybliss.com.ng/about-us/" target="_blank">About</a>
+          </li>
+          <li>
+            <a href="https://babybliss.com.ng/" target="_blank">Store</a>
+          </li>
+
+          <div class="topnav-close-btn">
+            <i class="fa fa-times"></i>
+          </div>
+        </ul>
+
+
+        <a href="javascript:void(0);" class="hamburger icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="hero-image">
+
+        <img src="./assets/mask-group2.png" alt="hero image" />
+        <i class="fa fa-play-circle play-icon" aria-hidden="true" data-modal-target="modal5"></i>
+
+      </div>
+    </div>
+    <div class="container-form">
+
+      <nav class="nav top-section-spacing">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="https://babybliss.com.ng/about-us/" target="_blank">
+              About BabyBliss
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a href="https://babybliss.com.ng/" target="_blank">
+              Visit our online store ↗
+            </a>
+
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container-form__inner-div">
+
+        <h1 class="form-header">
+          <p>Expectant</p>
+          <p>
+            Mums
+            <span>
+              Checklist
+            </span>
+          </p>
+        </h1>
+        <p class="form-text">We’ve got just the thing for you - a detailed list of things you are going to need. Please
+          enter your
+          information to recieve your checklist.</p>
+
+        <!-- FORM -->
+        <form id="form" class="form">
+          <div class="form-control">
+            <input type="text" placeholder="Your Name" id="full_name" name="full_name" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-control">
+            <input type="text" placeholder="Phone Number" name="phone" id="phone" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-control">
+            <input placeholder="Email Address" name="email" id="email" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-control">
+            <select name="stage" id="stage" required>
+              <option value="" disabled selected>
+                Select Pregnancy Stage
+              </option>
+              <option>1 month</option>
+              <option>2 months</option>
+              <option>3 months</option>
+              <option>4 months</option>
+              <option>5 months</option>
+              <option>6 months</option>
+              <option>7 months</option>
+              <option>8 months</option>
+              <option>9 months</option>
+            </select>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+          <div class="form-control">
+            <select name="store" id="store" required>
+              <option disabled value="" selected>
+                Closest Babybliss Store
+              </option>
+              <option>Lekki (Island)</option>
+              <option>Anthony (Mainland)</option>
+            </select>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small></small>
+          </div>
+
+          <div class="checbox">
+            <p class="hmo-info-text">We help mums get up to 10% in hospital discounts.</p>
+
+            <div class="checkbox-control">
+              <input class="checkbox-input" type="radio" name="hmo" id="hmo1" value="yes" required>
+              <label class="checkbox-label" for="hmo1">Yes! Sign me up for discounts</label>
+            </div>
+            <div class="checkbox-control">
+              <input class="checkbox-input" type="radio" name="hmo" id="hmo2" value="no">
+              <label class="checkbox-label" for="hmo2">No, I don’t need the savings</label>
+            </div>
+          </div>
+
+          <button type="submit">Download Checklist</button>
+          <p class="privacy">By submitting your details, you agree to our
+            <a href="https://babybliss.com.ng/privacy/" target="_blank">
+              Privacy Policy
+            </a>
+
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL -->
+  <div class="modal" id="modal5">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <iframe class="video-frame" width="100%" height="50%"
+        src="https://www.youtube.com/embed/2Szp4-0Vdgw?playsinline=1" allowfullscreen="false">
+      </iframe>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+  <script>
+    function myFunction() {
+      const x = document.getElementById("myLinks");
+      const closeMobileNavBtn = document.querySelector(".topnav-close-btn");
+      const hamburgerBtn = document.querySelector(".hamburger");
+      const body = document.querySelector("body");
+      x.classList.add("topnav-close");
+
+      hamburgerBtn.style.visibility = "hidden";
+      body.style.overflow = "hidden";
+
+      closeMobileNavBtn.addEventListener("click", () => {
+        x.classList.remove("topnav-close");
+        hamburgerBtn.style.visibility = "visible";
+        body.style.overflow = "auto";
+      })
+    }
+  </script>
+</body>
+
+</html>
