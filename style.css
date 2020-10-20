@@ -4,6 +4,7 @@ html {
   overscroll-behavior: contain none !important;
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,7 @@ ul {
   padding-left: 0;
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -70,6 +72,7 @@ TYPOGRAPHY
   margin-bottom: 0.75em;
   text-align: center;
 }
+
 .form-header span {
   color: #d41d7c;
 }
@@ -103,6 +106,7 @@ TYPOGRAPHY
   text-align: center;
   font-size: 0.625rem;
 }
+
 .privacy a {
   color: #000000;
 }
@@ -197,6 +201,10 @@ nav {
   padding: 2em 4em;
 }
 
+.vid {
+  display: none;
+}
+
 @media (min-width: 800px) {
   nav {
     display: block;
@@ -223,6 +231,23 @@ nav {
   align-self: center;
 }
 
+@media (max-width: 800px) {
+  .vid {
+    display: block;
+    height: 300px;
+  }
+
+  iframe {
+    margin-top: 0em !important;
+    height: 100%;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+}
+
 @media (min-width: 800px) {
   .logo-img {
     margin-left: 3em;
@@ -231,7 +256,11 @@ nav {
   .hamburger {
     display: none;
   }
+
+
 }
+
+
 
 /* Form */
 
@@ -366,6 +395,7 @@ nav {
 .hero-image {
   position: relative;
 }
+
 .hero-image i {
   font-size: 82px;
   position: absolute;
